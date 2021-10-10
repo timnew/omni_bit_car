@@ -1,6 +1,31 @@
 
 > Open this page at [https://timnew.github.io/omni_bit_car/](https://timnew.github.io/omni_bit_car/)
 
+## Introduction
+
+This is project for to control a Mecanum Wheel robot car with a remote controller communicated via MicroBit bluetooth protocol.
+
+The whole project requires:
+
+* 2 MicroBit controllers, one for the car, the other is fore the controller
+* [Yahboom Omni:Bit](https://category.yahboom.net/collections/micro-bit/products/omni-bit) as the car
+* [Yahboom GameHand](https://category.yahboom.net/collections/micro-bit/products/basicgamehandle) as the remote controller
+
+The software part contains 2 projects:
+
+* Car: https://github.com/timnew/omni_bit_car
+* Controller: https://github.com/timnew/omni_bit_remote
+
+## What is the difference from the offical solution
+
+* It is similar to the offical solution at the core, but is more elegent and graceful.
+* It inherits the responsiveness from the official solution, no response delay.
+* It reads the joystick analog reading on the control pad, and control the car with analog signal. So you can control the speed or the car with joy stick, also allow you to move the car in any direction as joystick points.
+* This project redsign the communication protocol, it depends on MicrBit's built-in key value pair signal instead of the clucky string based protocol.
+* By dropping the clucky string protocol, code is hugely simplifed.
+* The right buttons also controls the car to move forward and backward at full speed.
+* Button control and joystick control can seamlessly works at the same time.
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
