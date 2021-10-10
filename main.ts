@@ -1,23 +1,18 @@
 radio.onReceivedValue(function (name, value) {
-    switch (name) {
-        case "x":
-            x = value
-            break
-        case "y":
-            y = value
-            break
-        case "a":
-            angle = value
-            break
-        default:
-            basic.showIcon(IconNames.Sad)
-            basic.showString(name, 150)
-            break
+    if (name == "x") {
+        x = value
+    } else if (name == "y") {
+        y = value
+    } else if (name == "a") {
+        angle = value
+    } else {
+        basic.showIcon(IconNames.Sad)
+        basic.showString(name)
     }
 })
 let angle = 0
-let x = 0
 let y = 0
+let x = 0
 OmniBit.MotorStopAll()
 basic.showIcon(IconNames.Happy)
 radio.setGroup(1)
